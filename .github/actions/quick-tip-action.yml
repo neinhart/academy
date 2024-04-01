@@ -10,7 +10,8 @@ runs:
   using: 'composite'
   steps:
     - name: Share Tip
-      run: echo "Today's quick tip on ${{ inputs.topic }}: Always commit early and often."
+      run: |
+        echo "Today's quick tip on ${{ inputs.topic }}: Always commit early and often."
       shell: bash
 
     - name: Additional Advice

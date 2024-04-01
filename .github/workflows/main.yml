@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  share_programming_tip:
+    runs-on: ubuntu-latest
+    name: Share a programming tip
+    steps:
+      - uses: actions/checkout@v2
+      - id: tip
+        uses: ./.github/actions/quick-tip-action
+        with:
+          topic: 'Python'
